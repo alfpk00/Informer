@@ -1,0 +1,11 @@
+/.venv
+/.vscode
+/devtools
+/docs
+/images
+/sql
+/.version
+/.dev_flag
+/requirements.txt
+/test2.py
+*.pyc
