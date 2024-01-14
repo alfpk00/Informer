@@ -258,7 +258,6 @@ def check_integrity():
                         cur_upd.execute(sql, value)
                         conn.commit()
                         conn.close()
-                    print(module_name + " - " + hash + " - " + get_hash(module_name))
                 else:
                     err_flag = True
                     # TODO: Переписать в отдельную функцию!

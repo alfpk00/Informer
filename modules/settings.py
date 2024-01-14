@@ -28,10 +28,18 @@ def get_timestamp():  # Получаем текущее значение дат�
 
 @dataclass
 class DB:
-    Host: str = "localhost"  # Сервер БД
-    User: str = "ost_bot"  # Пользователь БД
-    Passwd: str = "aerowolf"  # Пароль БД
-    Name: str = "ostmc"  # Имя БД
+    with open("conf/db.conf") as conf_db:
+        for row in conf_db:
+            row = row.rstrip("\n")
+            name = row[: row.find(":")]
+            if name == "Host":
+                Host: str = row[row.find(":") + 1 :]
+            elif name == "User":
+                User: str = row[row.find(":") + 1 :]
+            elif name == "Passwd":
+                Passwd: str = row[row.find(":") + 1 :]
+            elif name == "DBName":
+                Name: str = row[row.find(":") + 1 :]
 
 
 class TLG:

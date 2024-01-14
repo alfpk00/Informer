@@ -9,3 +9,5 @@
 /requirements.txt
 /test2.py
 *.pyc
+/modules/settings.py
+/conf
